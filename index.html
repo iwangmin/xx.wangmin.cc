@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<title>王墨涵 - 「2014-11-25 23:06:00」</title>
+<meta name="keywords" content="王墨涵, wangmohan">
+<meta name="description" content="My first name is Wang Mohan.">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon-iphone.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-ipad.png"/>
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-iphone4.png"/>
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-iphone5.png"/>
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p,fieldset{margin:0;padding:0;}
+body{font-family:"Microsoft Yahei","Hiragino Sans GB",Tahoma,Arial,SimSun,PMingLiu,Verdana,sans-serif;color:#000;}
+img{border:0;}
+a{color:#cf515a;text-decoration:none;}
+a:hover{text-decoration:none;}
+#wrapper{max-width:640px;margin:20px auto;padding:0 10px;line-height:26px;color:#cf515a;}
+#wrapper p{margin-bottom:10px;}
+#wrapper p em{font-style:italic;font-weight:bold;}
+#wrapper p span{color:#000000;}
+#wrapper img{display:block;margin:0 auto;width:100%;height:100%;max-width:640px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<p>
+		大家好, <br/>
+		我的中文名字叫 <em>王墨涵</em> <span>(墨者, 书也, 涵者, 性也, 博览诗书, 才高八斗, 志趣高洁, 有涵养)</span>, <br/>
+		<!--英文名字叫 <em>Daphne</em> <span>(取之于希腊语, 月桂花, 我的命中之花)</span>, <br/>-->
+		乳名叫 <em>渲渲</em> <span>(以水墨再三而淋之，谓之渲)</span>,
+	</p>
+
+	<p>
+		<a id="showsectime"></a>
+		<script type="text/javascript">
+		function NewDate(str) {
+			var date = new Date(Date.parse(str.replace(/-/g,   "/")));
+			return date;
+		}
+		function showsectime() {
+			var birthDay =NewDate("2014-11-25 23:06:00");
+			var today=new Date();
+			var timeold=today.getTime()-birthDay.getTime();
+			//alert("2014-11-25");
+			var sectimeold=timeold/1000
+			var secondsold=Math.floor(sectimeold);
+			var msPerDay=24*60*60*1000;
+
+			var msPerYear=365*24*60*60*1000;
+			var e_Yearsold=timeold/msPerYear;
+			var Yearsold=Math.floor(e_Yearsold);
+			var e_daysold=(Yearsold-e_Yearsold)*-365
+			var daysold=Math.floor(e_daysold);
+			var e_hrsold=(daysold-e_daysold)*-24;
+			var hrsold=numadd0(Math.floor(e_hrsold));
+			var e_minsold=(hrsold-e_hrsold)*-60;
+			var minsold=numadd0(Math.floor((hrsold-e_hrsold)*-60));
+			//alert(minsold);
+			var seconds=numadd0(Math.floor((minsold-e_minsold)*-60)).toString();
+			document.getElementById("showsectime").innerHTML = "我已经和这个美丽的世界相遇<em> " + Yearsold + " </em>年<em> " + daysold + " </em>天<em> " + hrsold + " </em>小时<em> " + minsold + " </em>分<em> " + seconds + " </em> 秒啦~";
+			setTimeout(showsectime, 1000);
+		}
+		function numadd0(num) {
+			if(num < 10) {
+				num = '0'+num;
+			}
+			return num;
+		}
+		showsectime();
+		</script>
+	</p>
+
+	<p>我的 <em>相册专辑</em> 和 <em>视频专辑</em> 正在紧张开拍中..., 请大家期待一下哦~</p>
+
+	<p>好了, 先上一张靓照吧</p>
+
+	<p><img src="images/1.jpg" /></p>
+</div>
+</body>
+</html>
